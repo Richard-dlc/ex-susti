@@ -1,88 +1,99 @@
-/* Estilos generales */
+/* Estilo básico del cuerpo del documento */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f8f8f8;
-    color: #333;
+    font-family: Arial, sans-serif; /* Fuente base legible */
+    margin: 0; /* Elimina margen por defecto */
+    padding: 0; /* Elimina relleno por defecto */
+    line-height: 1.6; /* Altura entre líneas para mejor lectura */
+    background-color: #f8f8f8; /* Color de fondo claro */
+    color: #333; /* Color de texto gris oscuro */
 }
 
+/* Estilo del encabezado principal */
 header {
-    background-color: #004d66;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+    background-color: #004d66; /* Azul oscuro */
+    color: white; /* Texto blanco */
+    padding: 1rem; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
 }
 
+/* Menú de navegación en línea */
 nav ul {
-    list-style: none;
+    list-style: none; /* Sin viñetas */
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
+    display: flex; /* Distribuye en fila */
+    justify-content: center; /* Centra los ítems */
+    gap: 1em; /* Espacio entre ítems */
 }
 
+/* Enlaces del menú */
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5em;
-    transition: background 0.3s;
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    padding: 0.5em; /* Espaciado interno */
+    transition: background 0.3s; /* Animación de fondo */
 }
 
+/* Efecto hover en enlaces del menú */
 nav ul li a:hover {
-    background-color: #007c99;
-    border-radius: 5px;
+    background-color: #007c99; /* Azul más claro */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
+/* Contenido principal */
 main {
-    padding: 1.5em;
+    padding: 1.5em; /* Espaciado interno */
 }
 
+/* Secciones de contenido */
 section {
-    margin-bottom: 2em;
-    background-color: white;
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2em; /* Separación entre secciones */
+    background-color: white; /* Fondo blanco */
+    padding: 1em; /* Espaciado interno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera */
 }
 
-/* Acordeón interactivo */
+/* ==================== ACORDEÓN INTERACTIVO ==================== */
+
+/* Botón del acordeón */
 .acordeon {
-    background-color: #006080;
-    color: white;
-    cursor: pointer;
+    background-color: #006080; /* Azul oscuro */
+    color: white; /* Texto blanco */
+    cursor: pointer; /* Cambia cursor al pasar */
     padding: 1em;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
     font-size: 1em;
-    transition: background 0.4s ease;
+    transition: background 0.4s ease; /* Animación de fondo */
     margin-bottom: 0.5em;
     border-radius: 5px;
 }
 
+/* Efecto hover del acordeón */
 .acordeon:hover {
-    background-color: #008ca1;
+    background-color: #008ca1; /* Azul más claro */
 }
 
+/* Panel oculto del acordeón */
 .panel {
     padding: 0 1em;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-    background-color: #e7f7fa;
-    border-left: 3px solid #00aaff;
-    border-radius: 0 0 10px 10px;
+    max-height: 0; /* Oculto por defecto */
+    overflow: hidden; /* Oculta contenido desbordado */
+    transition: max-height 0.4s ease-out; /* Desplegado animado */
+    background-color: #e7f7fa; /* Azul muy claro */
+    border-left: 3px solid #00aaff; /* Línea decorativa izquierda */
+    border-radius: 0 0 10px 10px; /* Redondeado inferior */
 }
 
-/* Galería de imágenes */
+/* ==================== GALERÍA DE IMÁGENES ==================== */
+
 .galeria {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center;
+    flex-wrap: wrap; /* Permite múltiples líneas */
+    gap: 1em; /* Espacio entre imágenes */
+    justify-content: center; /* Centra imágenes */
 }
 
 .galeria img {
@@ -90,18 +101,19 @@ section {
     height: auto;
     cursor: pointer;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animaciones */
 }
 
 .galeria img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: scale(1.05); /* Agranda imagen */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra al pasar */
 }
 
-/* Tabla técnica */
+/* ==================== TABLA TÉCNICA ==================== */
+
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Junta bordes */
     margin-top: 1em;
 }
 
@@ -112,15 +124,16 @@ th, td {
 }
 
 th {
-    background-color: #00aaff;
+    background-color: #00aaff; /* Azul claro */
     color: white;
 }
 
-/* Formulario */
+/* ==================== FORMULARIO ==================== */
+
 form {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1em; /* Espacio entre campos */
 }
 
 input, textarea {
@@ -145,19 +158,20 @@ button[type="submit"]:hover {
     background-color: #008ca1;
 }
 
-/* Responsive */
+/*  RESPONSIVE (ADAPTACIÓN A PANTALLAS PEQUEÑAS) */
+
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Menú vertical */
         align-items: center;
     }
 
     .galeria {
-        flex-direction: column;
+        flex-direction: column; /* Galería en columna */
         align-items: center;
     }
 
     .galeria img {
-        width: 90%;
+        width: 90%; /* Imágenes más pequeñas */
     }
 }
