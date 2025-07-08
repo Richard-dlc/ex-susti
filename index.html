@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página educativa sobre la Fotogrametría en Geomática con elementos interactivos.">
+    <title>Fotogrametría en Geomática</title>
+    <link rel="stylesheet" href="css/foto.css">
+    <script defer src="js/foto.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>#map { height: 300px; margin-top: 1em; }</style>
+</head>
+<body>
+    <header>
+        <h1>Fotogrametría en Geomática</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#tipos">Tipos</a></li>
+                <li><a href="#aplicaciones">Aplicaciones</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="introduccion">
+            <h2>Introducción</h2>
+            <button class="acordeon">¿Qué es la fotogrametría?</button>
+            <div class="panel">
+                <p>La fotogrametría es una técnica que permite obtener información precisa de objetos y terrenos a partir de fotografías, utilizando principios de geometría. Mediante el análisis de imágenes tomadas desde diferentes ángulos (ya sea con cámaras terrestres, drones, aviones o satélites), se pueden generar modelos 3D, ortofotos y mapas topográficos. Es ampliamente usada en áreas como la topografía, ingeniería, medio ambiente, arqueología y planificación urbana, gracias a su capacidad para representar digitalmente el mundo real con alta precisión.
+
+.</p>
+                <img src="imagenes/Evolucion.webp" alt="Evolución" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:10px;">
+            </div>
+            <button class="acordeon">Historia</button>
+            <div class="panel">
+                <p>La fotogrametría nace en el siglo XIX con Aimé Laussedat, quien usó fotografías para medir terrenos. Su desarrollo continuó con la aparición de la aviación, dando origen a la fotogrametría aérea durante la Primera Guerra Mundial. En el siglo XX evolucionó con instrumentos analíticos y luego digitales, mejorando la precisión del procesamiento. Hoy, gracias a drones y software avanzado, es una herramienta accesible y esencial para generar modelos 3D y mapas detallados, utilizada tanto por profesionales como por usuarios comunes.
+
+</p>
+                 <img src="imagenes/historia.png" alt="Historia" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:10px;">
+            </div>
+        </section>
+        
+        <section id="tipos">
+            <h2>Tipos de Fotogrametría</h2>
+
+  <!-- Acordeón 1: Fotogrametría Aérea -->
+            <button class="acordeon">📡 Fotogrametría Aérea</button>
+            <div class="panel">
+            <p>
+              La <strong>fotogrametría aérea</strong> es una técnica que consiste en la captura de imágenes del terreno desde plataformas elevadas, como aviones tripulados o drones (UAVs), equipados con cámaras fotográficas o sensores multiespectrales. Estas imágenes, tomadas con una geometría conocida y una alta superposición, permiten la reconstrucción tridimensional del terreno mediante el análisis estereoscópico y técnicas de correlación de píxeles.
+            </p>
+            <p>
+              Una de las principales ventajas de esta modalidad es su capacidad para cubrir grandes extensiones en poco tiempo, siendo esencial en <em>cartografía topográfica, monitoreo de uso del suelo, agricultura de precisión y gestión de desastres naturales</em>. Las imágenes aéreas pueden ser procesadas para generar <strong>ortofotos, modelos digitales de elevación (MDE) y nubes de puntos</strong>.
+            </p>
+            <p>
+              Hoy en día, el uso de drones ha democratizado el acceso a esta técnica, permitiendo a instituciones, empresas y gobiernos realizar levantamientos topográficos de alta calidad con bajos costos.
+            </p>
+            </div>
+
+  <!-- Acordeón 2: Fotogrametría Terrestre -->
+            <button class="acordeon">🧱 Fotogrametría Terrestre</button>
+            <div class="panel">
+            <p>
+             La <strong>fotogrametría terrestre</strong>, también conocida como close-range, se realiza con cámaras situadas a nivel del suelo o cerca del objeto de estudio. Se utiliza en <em>documentación arquitectónica, arqueológica, forense y modelado de estructuras complejas</em>, donde se requiere gran detalle y precisión.
+            </p>
+            <p>
+            Mediante software como <strong>Agisoft Metashape, RealityCapture</strong> o <strong>Meshroom</strong>, se reconstruyen modelos 3D usando la técnica de <em>Structure from Motion (SfM)</em>. Es una opción económica frente al escaneo láser, con resultados comparables en muchas aplicaciones técnicas.
+            </p>
+            <p>
+            También puede integrarse con sensores GNSS para georreferenciación precisa, siendo útil en ingeniería, minería o conservación de patrimonio.
+            </p>
+            </div>
+
+  <!-- Acordeón 3: Fotogrametría Satelital -->
+            <button class="acordeon">🛰️ Fotogrametría Satelital</button>
+            <div class="panel">
+            <p>
+            La <strong>fotogrametría satelital</strong> utiliza imágenes obtenidas desde satélites con sensores ópticos, infrarrojos o de radar. Aunque tiene menor resolución que otras técnicas, ofrece una <em>visión global y sistemática</em> del planeta.
+            </p>
+            <p>
+            Satélites como <strong>WorldView, GeoEye, Pléiades</strong> o <strong>Sentinel</strong> capturan imágenes estereoscópicas útiles para <em>modelos digitales de elevación, ortomosaicos y análisis multitemporales</em>.
+            </p>
+            <p>
+            Su gran ventaja es permitir estudios en zonas remotas, siendo clave en <em>seguimiento ambiental, planificación territorial y análisis de cambios geoespaciales</em>.
+            </p>
+            </div>
+        </section>
+    
+         <section id="aplicaciones">
+  <h2>Aplicaciones de la Fotogrametría</h2>
+
+  <!-- Acordeón 1: Modelado 3D -->
+  <button class="acordeon">🧱 Modelado 3D</button>
+  <div class="panel">
+    <p>
+      Una de las aplicaciones más destacadas de la fotogrametría es el <strong>modelado tridimensional (3D)</strong> de objetos, estructuras, edificaciones y superficies del terreno. A través de la reconstrucción fotogramétrica, se obtienen modelos digitales precisos y texturizados, fundamentales en áreas como <em>arquitectura, patrimonio cultural, videojuegos, cine, ingeniería civil y diseño industrial</em>.
+    </p>
+    <p>
+      Estos modelos permiten realizar análisis volumétricos, mediciones exactas, simulaciones, y visualizaciones realistas, tanto en entornos científicos como comerciales. La combinación con realidad aumentada (AR) y realidad virtual (VR) potencia aún más su valor.
+    </p>
+  </div>
+
+  <!-- Acordeón 2: Impacto Ambiental -->
+  <button class="acordeon">🌱 Impacto Ambiental</button>
+  <div class="panel">
+    <p>
+      La fotogrametría facilita el monitoreo y evaluación del <strong>impacto ambiental</strong> en ecosistemas naturales y zonas urbanas. Mediante comparaciones multitemporales de imágenes se pueden detectar <em>deforestación, erosión, pérdida de biodiversidad, expansión urbana y contaminación</em>.
+    </p>
+    <p>
+      Este análisis es utilizado por entidades gubernamentales y ONGs para elaborar informes ambientales, establecer medidas de mitigación, y gestionar políticas de desarrollo sostenible. También es clave en estudios de cambio climático y conservación de áreas protegidas.
+    </p>
+  </div>
+
+  <!-- Acordeón 3: Zonas de Riesgo -->
+  <button class="acordeon">⚠️ Zonas de Riesgo</button>
+  <div class="panel">
+    <p>
+      En la gestión de riesgos y prevención de desastres, la fotogrametría permite la identificación precisa de <strong>zonas vulnerables</strong> ante amenazas naturales como <em>deslizamientos, aluviones, sismos, inundaciones o actividad volcánica</em>.
+    </p>
+    <p>
+      Los modelos topográficos y ortofotos generados con fotogrametría permiten realizar simulaciones de eventos catastróficos, diseñar rutas de evacuación, planificar obras de defensa civil y mapear riesgos con alta resolución.
+    </p>
+    <p>
+      Es una herramienta clave para gobiernos locales, defensa civil, geólogos e ingenieros, integrándose con sistemas de información geográfica (SIG).
+    </p>
+  </div>
+</section>
+
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="galeria">
+                <img src="imagenes/topografia.jpg" alt="Ortofotografía" onclick="mostrarImagen(this)">
+                <img src="imagenes/Ortofoto.jpeg" alt="Modelo 3D" onclick="mostrarImagen(this)">
+                <img src="imagenes/fotogrametria_3d.png" alt="Modelo 3D" onclick="mostrarImagen(this)">
+            </div>
+        </section>
+        <section id="mapa">
+            <h2>Mapa</h2>
+            <div id="map"></div>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Autor: Richard De La Cruz Hidalgo - 2025</p>
+        <p>Contacto: 76122350@sencico.edu.pe</p>
+    </footer>
+</body>
+</html>
+
